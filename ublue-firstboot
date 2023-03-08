@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if test -e "$HOME"/.config/ublue/firstboot-done; then
+if test -e "$HOME"/.config/silverybluish/firstboot-done; then
     echo "Already ran"
     exit 0
 fi
@@ -56,8 +56,8 @@ fi
 echo "25"
 
 echo "# Installing flatpaks from recipe"
-flatpaks=$(yq '.flatpaks[]' < /etc/ublue-recipe.yml)
-flatpaks_count=$(yq '.flatpaks[]' < /etc/ublue-recipe.yml | wc -l)
+flatpaks=$(yq '.flatpaks[]' < /etc/silverybluish-recipe.yml)
+flatpaks_count=$(yq '.flatpaks[]' < /etc/silverybluish-recipe.yml | wc -l)
 i=0
 for pkg in $flatpaks; do
   echo "# Installing ${pkg}"
@@ -85,8 +85,8 @@ echo "100"
 
 
 echo "# Reticulating Final Splines"
-mkdir -p "$HOME"/.config/ublue/
-touch "$HOME"/.config/ublue/firstboot-done
+mkdir -p "$HOME"/.config/silverybluish/
+touch "$HOME"/.config/silverybluish/firstboot-done
 cp -n /etc/justfile "$HOME"/.justfile
 
 ) | 
