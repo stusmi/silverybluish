@@ -8,7 +8,7 @@ A custom Fedora Silverblue image based on the great work done in [Universal Blue
 
 This is a custom image of Fedora Silverblue. It builds on the silverblue-main image from [ublue-os](https://github.com/ublue-os/main). If you're looking to build your own custom image, you'd be best served by heading over to [Universal Blue](https://ublue.it), taking a look at their work and following their community.
 
-```
+```mermaid
 flowchart LR
     A(Fedora Silverblue\n) --> B(uBlue silverblue-main)
     B --> C(Silverybluish)
