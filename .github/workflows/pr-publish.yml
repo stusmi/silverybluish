@@ -2,7 +2,7 @@ name: Publish PR builds
 
 on:
   workflow_run:
-    workflows: ["build-ublue"]
+    workflows: ["build-oci"]
     types:
       - completed
 

@@ -1,5 +1,9 @@
 rpms:
   - zenity
+  - tailscale
+  - gnome-shell-extension-appindicator
+  - gnome-shell-extension-just-perfection
+  - gnome-shell-extension-blur-my-shell
 flatpaks:
   - org.mozilla.firefox
   - com.mattjakeman.ExtensionManager

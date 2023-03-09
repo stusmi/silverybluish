@@ -18,9 +18,15 @@ RUN echo "-- Installing RPMs defined in recipe.yml --" && \
         echo "Installing: ${pkg}" && \
         rpm-ostree install $pkg; \
     done && \ 
+    systemctl unmask dconf-update.service && \
+    systemctl enable dconf-update.service && \
+    systemctl enable tailscaled.service && \
+    sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
+    sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
     echo "---"
 
 RUN rm -rf \
         /tmp/* \
         /var/* && \
+    rm -f /etc/yum.repos.d/tailscale.repo && \
     ostree container commit
