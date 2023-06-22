@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Silverybluish Desktop FirstBoot Setup
-Comment=Sets up Ublue Desktop Correctly On FirstBoot
-Exec=/usr/bin/silverybluish-firstboot
-Icon=org.gnome.Terminal
-Type=Application
-Categories=Utility;System;
-Name[en_US]=startup

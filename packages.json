@@ -1,0 +1,70 @@
+{
+    "all": {
+        "include": {
+            "all": [
+                "distrobox",
+                "ffmpeg",
+                "ffmpeg-libs",
+                "fzf",
+                "grub2-tools-extra",
+                "htop",
+                "intel-media-driver",
+                "just",
+                "kernel-devel-matched",
+                "kernel-tools",
+                "libratbag-ratbagd",
+                "libva-intel-driver",
+                "libva-utils",
+                "lshw",
+                "mesa-va-drivers-freeworld",
+                "net-tools",
+                "nvme-cli",
+                "openrgb-udev-rules",
+                "openssl",
+                "podman-compose",
+                "pipewire-codec-aptx",
+                "smartmontools",
+                "symlinks",
+                "tcpdump",
+                "tmux",
+                "traceroute",
+                "neovim",
+                "zstd",
+                "wireguard-tools",
+                "tailscale"
+            ],
+            "silverblue": [
+                "adw-gtk3-theme",
+                "ffmpegthumbnailer",
+                "gnome-tweaks",
+                "easyeffects",
+                "gnome-shell-extension-appindicator",
+                "gnome-shell-extension-just-perfection",
+                "gnome-shell-extension-blur-my-shell"
+            ]
+        },
+        "exclude": {
+            "all": [
+                "libavcodec-free",
+                "libavdevice-free",
+                "libavfilter-free",
+                "libavformat-free",
+                "libavutil-free",
+                "libpostproc-free",
+                "libswresample-free",
+                "libswscale-free",
+                "mesa-va-drivers",
+                "firefox",
+                "firefox-langpacks"
+            ]
+        }
+    },
+    "38": {
+        "include": {
+            "all": []
+        },
+        "exclude": {
+            "all": []
+        }
+    }
+}
