@@ -44,6 +44,11 @@ jobs:
 
       - name: Matrix Variables
         run: |
+          if [[ "${{ matrix.image_name }}" == "silverybluish" ]]; then
+              echo "SOURCE_IMAGE=silverblue" >> $GITHUB_ENV
+          else
+              echo "SOURCE_IMAGE=${{ matrix.image_name }}" >> $GITHUB_ENV
+          fi
           echo "IMAGE_NAME=${{ format('{1}', matrix.image_name, env.IMAGE_BASE_NAME) }}" >> $GITHUB_ENV
 
       - name: Generate tags
