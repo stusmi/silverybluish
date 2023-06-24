@@ -6,25 +6,17 @@ A custom Fedora Silverblue image based on the great work done in [Universal Blue
 
 ## What is this?
 
-This is a custom image of Fedora Silverblue. It builds on the silverblue-main image from [ublue-os](https://github.com/ublue-os/main). If you're looking to build your own custom image, you'd be best served by heading over to [Universal Blue](https://ublue.it), taking a look at their work and following their community.
+This is a custom image of Fedora Silverblue. It's based on the work of the silverblue-main image from [ublue-os](https://github.com/ublue-os/main) with a few changes for my own needs. If you're looking to build your own custom image, you'd be best served by heading over to [Universal Blue](https://ublue.it), taking a look at their work and following their community.
 
-```mermaid
-flowchart LR
-    A(Fedora Silverblue\n) --> B(uBlue silverblue-main)
-    B --> C(Silverybluish)
-```
 
 Check out the [spec for Fedora](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) for more information and proper explanation.
 
 ## Installation
 
-> **Warning**
-> This is an experimental feature and should not be used in production, try it in a VM for a while! If you are rebasing and not doing a clean install do a `touch ~/.config/silverybluish/firstboot-done` to keep your flatpak configuration untouched BEFORE you rebase, otherwise we're going to mangle it (for science).
-
-To rebase an existing Silverblue/Kinoite installation to the latest build:
+To rebase an existing Silverblue/Kinoite installation to the current build:
 
 ```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/stusmi/silverybluish:latest
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/stusmi/silverybluish:38
 ```
 
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
@@ -33,7 +25,6 @@ This repository builds date tags as well, so if you want to rebase to a particul
 sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/stusmi/silverybluish:20221217
 ```
 
-The `latest` tag will automatically point to the latest build. Note that when a new version of Fedora is released that the `latest` tag will get updated to that latest release automatically.
 
 ## Verification
 
